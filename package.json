@@ -16,7 +16,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "npx husky install .husky"
+    "prepare": "npx husky install",
+    "prettier:fix": "npm prettier --write"
   },
   "husky": {
     "hooks": {
@@ -25,7 +26,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --write"
+      "npm prettier:fix"
     ]
   },
   "eslintConfig": {
@@ -47,7 +48,7 @@
     ]
   },
   "devDependencies": {
-    "husky": "^4.3.8",
+    "husky": "^7.0.0",
     "lint-staged": "^11.2.0",
     "prettier": "^2.4.1"
   }
